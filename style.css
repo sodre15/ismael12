@@ -15,8 +15,9 @@ body {
 
 img{
     width: 100%;
-    heigth: 100vh;
+    height: 100vh;
 }
+
 .menu a {
     float: left;
     display: block;
