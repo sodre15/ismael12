@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ismael</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Gartoon-Team-Gartoon-Misc-Gtk-Edit.512.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="menu">
+        <span class="menu-icon" onclick="toggleMenu()">☰</span>
+        <a href="index.html">Home</a>
+        <a href="page2.html">SUS 1</a>
+        <a href="page4.html">SUS 2</a>
+        <a href="page3.html">Administrativo</a>
+        <a href="page5.html">Portugues</a>
+         <a href="page6.html">Portugues</a> 
+      
+    </div>
+    <img src="AF8B9843A-696x464.jpg" alt="Imagem JPEG" width="300">
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            const links = menu.querySelectorAll('a');
+            links.forEach(link => {
+                if (link.style.display === 'block') {
+                    link.style.display = 'none';
+                } else {
+                    link.style.display = 'block';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+  
+
+  
+
+  
