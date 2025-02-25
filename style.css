@@ -83,6 +83,23 @@ img{
 
     }
 
+    p{
+        color: white;
+    }
+
+    #pdf{
+        color:yellow;
+        background-color: yellow;
+        text-align: center;
+        font-family:Arial, Helvetica, sans-serif;
+        width: 300px;
+        border-radius: 10px;
+        margin-left: 600px;
+       
+        
+
+    }
+
    
 
    
