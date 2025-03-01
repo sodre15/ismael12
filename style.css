@@ -114,6 +114,7 @@ img{
     .question {
         margin-bottom: 20px;
         color: white;
+        background-color: blue;
     }
     .result {
         font-weight: bold;
