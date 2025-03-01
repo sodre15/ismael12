@@ -111,6 +111,15 @@ img{
         text-align: center;
     }
 
+     .question {
+        margin-bottom: 20px;
+        color: white;
+    }
+    .result {
+        font-weight: bold;
+    }
+
+
    
 
    
