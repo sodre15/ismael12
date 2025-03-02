@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Gartoon-Team-Gartoon-Misc-Gtk-Edit.512.png" type="image/x-icon">
+    
+      
+    
+</head>
+<body>
+
+    <div class="menu">
+    
+        <span class="menu-icon" onclick="toggleMenu()">☰</span>
+        <a href="index.html">Home</a>
+        <a href="page2.html">SUS 1</a>
+        <a href="page4.html">SUS 2</a>
+        <a href="page3.html">Administrativo</a>
+        <a href="page5.html">Portugues</a>
+        <a href="page6.html">Administrativo 2</a>
+        <a href="questoes.html">Questões-sus</a>
+        <a href="questoes2.html">Questões-Adm.</a>
+   
+   
+    </div>
+
+    <div id="countdown"></div>
+    <script>
+        function startCountdown(endDate) {
+            const countdownElement = document.getElementById('countdown');
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = endDate - now;
+                
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                
+                if (distance < 0) {
+                    countdownElement.textContent = "Tempo esgotado!";
+                    clearInterval(countdownInterval);
+                }
+            }
+
+            updateCountdown();
+            const countdownInterval = setInterval(updateCountdown, 1000);
+        }
+
+        window.onload = function () {
+            const endDate = new Date('March 23, 2025 00:00:00').getTime();
+            startCountdown(endDate);
+        };
+    </script>
+
+<h1><mark>Questões-Administrativas</mark></h1>
+
+<div class="question">
+    <p>1. Sobre a Teoria Geral da Administração (TGA), 
+        assinale a alternativa correta. 
+        </p>
+    <input type="radio" id="q1a" name="q1" value="a">A.  Na abordagem clássica da administração, há 
+    importantes nomes que discorrem sobre o 
+    comportamento humano.   
+    <br>
+    <input type="radio" id="q1b" name="q1" value="b">B.   A administração científica tem foco na estrutura.  <br>
+    <input type="radio" id="q1c" name="q1" value="c">C.  A teoria burocrática contribui para a criação de 
+    um modelo de organização racional.  <br>
+    <input type="radio" id="q1d" name="q1" value="d">D.  A teoria contingencial trouxe a contribuição do 
+    conceito de sistema e seu intercâmbio com o 
+    ambiente organizacional. <br>
+    <input type="radio" id="q1e" name="q1" value="e">E.   No taylorismo, foi adotado o princípio da 
+    intensificação, economicidade e produtividade. 
+    <br>
+    <button onclick="checkAnswer('q1', 'c')">Verificar Resposta</button>
+    <span class="result" id="result1"></span>
+    </div>
+
+    <div class="question">
+        <p>2. A respeito da administração de pessoas, assinale 
+            a alternativa que apresenta uma vantagem da 
+            centralização da GP (Gestão de Pessoas).
+            </p>
+        <input type="radio" id="q2a" name="q2" value="a">A. Os líderes assumem todas as responsabilidades 
+        sobre seus subordinados, alcançando um 
+        controle mais próximo.
+        <br>
+        <input type="radio" id="q2b" name="q2" value="b">B.   Há a concentração das decisões e ações no staff 
+        de GP.   <br>
+        <input type="radio" id="q2c" name="q2" value="c">C. É ideal para pequenas empresas e proporciona 
+        elevada integração intradepartamental.   <br>
+        <input type="radio" id="q2d" name="q2" value="d">D. Há homogeneização e padronização das práticas 
+        de GP.  <br>
+        <input type="radio" id="q2e" name="q2" value="e">E.   Os executivos de linha ficam afastados dos 
+        assuntos de GP, permitindo que haja tempo para 
+        atuar em outros projetos. 
+        <br>
+        <button onclick="checkAnswer('q2', 'c')">Verificar Resposta</button>
+        <span class="result" id="result2"></span>
+        </div>
+    
+
+
+    <script>
+        function checkAnswer(questionName, correctAnswer) {
+            const radios = document.getElementsByName(questionName);
+            let userAnswer;
+            for (const radio of radios) {
+                if (radio.checked) {
+                    userAnswer = radio.value;
+                    break;
+                }
+            }
+            const resultElement = document.getElementById('result' + questionName.slice(1));
+            if (userAnswer === correctAnswer) {
+                resultElement.innerText = 'Correto!';
+                resultElement.style.color = 'green';
+            } else {
+                resultElement.innerText = 'Errado!';
+                resultElement.style.color = 'red';
+            }
+        }
+    </script>
+   
+
+    
+</body>
+</html>
+
 
