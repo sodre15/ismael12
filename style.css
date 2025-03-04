@@ -113,8 +113,8 @@ img{
 
     .question {
         margin-bottom: 20px;
-        color: white;
-        background-color: blue;
+        color: black;
+        background-color: gray;
     }
     .result {
         font-weight: bold;
