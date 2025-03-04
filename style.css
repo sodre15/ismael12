@@ -115,6 +115,7 @@ img{
         margin-bottom: 20px;
         color: black;
         background-color: gray;
+        font-size: 25px;
     }
     .result {
         font-weight: bold;
