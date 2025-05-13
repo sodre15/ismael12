@@ -3,102 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Plataforma de Videoaulas</title>
-   
+    <title>Minha Plataforma de Vídeo</title>
+    
 </head>
+
 <style>
     body {
     font-family: Arial, sans-serif;
-    background-color: #141414;
-    color: white;
     margin: 0;
     padding: 0;
-    text-align: center;
+    background-color: #141414;
+    color: white;
 }
 
 header {
-    background-color: #e50914;
+    text-align: center;
     padding: 20px;
-    font-size: 24px;
+    background-color: #222;
 }
 
-.menu {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-}
-
-.menu li {
-    display: inline;
-}
-
-.menu a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-}
-
-.video-section {
     padding: 20px;
 }
 
-.video-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.video-card {
-    background: #222;
-    padding: 10px;
-    border-radius: 5px;
-    width: 300px;
-}
-
-iframe {
+.video iframe {
     width: 100%;
-    border-radius: 5px;
+    height: 200px;
+}
+iframe{
+    border-radius: 20px;
+}
+p{
+    text-align: center;
 }
 </style>
 <body>
     <header>
-        <h1>Minha Plataforma de Videoaulas</h1>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Categorias</a></li>
-                <li><a href="#">Favoritos</a></li>
-                <li><a href="#">Perfil</a></li>
-            </ul>
-        </nav>
+        <h1>Minha Plataforma de Vídeo</h1>
     </header>
-
     <main>
-        <section class="video-section">
-            <h2>Dê o Play!</h2>
-            <div class="video-container">
-
-                <div>
-                <div class="video-card">
-                   <iframe width="100%" height="200" frameborder="0" src="https://mega.nz/embed/gAgQTbAb#E5ftyLKIU58O4kTvvJnbkavRRtIhW1YvuasI7qKG9_w" allowfullscreen ></iframe>
-                   <p>Heroi por acidente</p>
-                </div>
+        <div class="video-grid">
+            <div class="video">
+                <iframe width="100%" height="200" frameborder="0" src="https://mega.nz/embed/gAgQTbAb#E5ftyLKIU58O4kTvvJnbkavRRtIhW1YvuasI7qKG9_w" allowfullscreen ></iframe>
+                <p>Heroi por Acidende</p>
 
             </div>
+            <div class="video">
+                <iframe width="100%" height="2000" frameborder="0" src="https://mega.nz/embed/EZZgCQID#sU86pZGrDzsLBRIURCH5rtGAWQXLOI2dv5Wl0hd4Tyk" allowfullscreen ></iframe>
+                <p>Quebrando Correntes</p>
 
-            <div>
-                <div class="video-card">
-                  <iframe width="100%" height="200" frameborder="0" src="https://mega.nz/embed/EZZgCQID#sU86pZGrDzsLBRIURCH5rtGAWQXLOI2dv5Wl0hd4Tyk" allowfullscreen ></iframe>
+            </div>
+            <div class="video">
+               <iframe width="100%" height="2000" frameborder="0" src="https://mega.nz/embed/hF51AY7Z#iOvOiGEBSPlQDJo8XKx5bPJ2IKo4Qt4g-zIlLBTPG0c" allowfullscreen ></iframe>
+               <p>Uma Vida de Esperança</p>
 
-                   <p>Quebrando as Correntes</p>
-                </div>
-            
-            
-            
-        </section>
+            </div>
+        </div>
     </main>
 </body>
 </html>
