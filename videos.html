@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Plataforma de Vídeo</title>
+    <link rel="shortcut icon" href="icons8-herbie-48.png" type="image/x-icon">
     
 </head>
 
@@ -19,7 +20,7 @@
 header {
     text-align: center;
     padding: 20px;
-    background-color: #222;
+    background-color: red;
 }
 
 .video-grid {
@@ -39,11 +40,36 @@ iframe{
 p{
     text-align: center;
 }
+ul li{
+    display: inline-block;
+    margin-left: 20px;
+    
+}
+button{
+    background-color: black;
+    color: red;
+    border-radius: 5px;
+    font-size: 20px;
+}
+button:hover{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
 </style>
 <body>
+     <div class="menu">
+        <ul>
+            <li><a href="index.html"><button>Home</button></a></li>
+            <li><a href="videos.html"><button>Vídeos</button></a></li>
+            <li><a href="#"><button>Extra</button></a></li>
+        </ul>
+    </div>
     <header>
         <h1>Minha Plataforma de Vídeo</h1>
     </header>
+   
     <main>
         <div class="video-grid">
             <div class="video">
@@ -52,15 +78,20 @@ p{
 
             </div>
             <div class="video">
-                <iframe width="100%" height="2000" frameborder="0" src="https://mega.nz/embed/EZZgCQID#sU86pZGrDzsLBRIURCH5rtGAWQXLOI2dv5Wl0hd4Tyk" allowfullscreen ></iframe>
+                <iframe width="100%" height="200" frameborder="0" src="https://mega.nz/embed/EZZgCQID#sU86pZGrDzsLBRIURCH5rtGAWQXLOI2dv5Wl0hd4Tyk" allowfullscreen ></iframe>
                 <p>Quebrando Correntes</p>
 
             </div>
             <div class="video">
-               <iframe width="100%" height="2000" frameborder="0" src="https://mega.nz/embed/hF51AY7Z#iOvOiGEBSPlQDJo8XKx5bPJ2IKo4Qt4g-zIlLBTPG0c" allowfullscreen ></iframe>
+               <iframe width="100%" height="200" frameborder="0" src="https://mega.nz/embed/hF51AY7Z#iOvOiGEBSPlQDJo8XKx5bPJ2IKo4Qt4g-zIlLBTPG0c" allowfullscreen ></iframe>
                <p>Uma Vida de Esperança</p>
 
             </div>
+            <div >
+                <iframe src="https://drive.google.com/file/d/1Q1P1dySFA0Y9SmRqC_RK4qZlTpL2tTY-/preview" width="325" height="245" allowfullscreen  allow="autoplay"></iframe>
+                <p>Exterritorial</p>
+            </div>    
+             
         </div>
     </main>
 </body>
